@@ -12,6 +12,7 @@
 
 ######1. 第一步动画
 ![动画第一步.png](http://upload-images.jianshu.io/upload_images/979175-79f9ebd0d313f685.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 我们可以看到该动画分为两步：
 1. 箭头的竖线变化为点。
 2. 箭头变化为直线，并且伴随有弹簧效果。
@@ -51,6 +52,7 @@ animation.beginTime = CACurrentMediaTime() + 0.6;
 ```
 ######2. 第二步动画
 ![第二步.png](http://upload-images.jianshu.io/upload_images/979175-6642a1c48bc99070.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 这步动画比较简单:就是一个`Position`弹性动画。
 ```
 /*点上弹动画*/
@@ -72,6 +74,7 @@ positionAnimation.delegate = self;
 
 ######3. 第三步动画
 ![第三步动画.png](http://upload-images.jianshu.io/upload_images/979175-f54c498faf603b54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 这一步动画比较多,我们一个一个来看：
 1. 根据下载进度`Progress`绘制圆环。
 2. 箭头直线变为正弦曲线波浪线，通过改变相位，进行移动。
@@ -148,6 +151,7 @@ self.progressLabel.hidden = YES;
 ######5. 第五步动画
 
 ![第五步动画.png](http://upload-images.jianshu.io/upload_images/979175-dbf43e064540c791.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 这部分动画分为三步:
 1. 圆环线宽`lineWidth`变为0，透明度`opacity`变为0。
 2. 对勾变为初始箭头的`path`动画。
@@ -196,5 +200,6 @@ checkAnimation.fillMode = kCAFillModeForwards;
 
 至此，所有的动画已经全部完成。最终效果如下。
 ![最终效果.gif](http://upload-images.jianshu.io/upload_images/979175-cb65e4a549946ba2.gif?imageMogr2/auto-orient/strip)
+
 ####总结
-开始看到这个动画时无从下手，但是将动画分解成一个个简单的组合后，就非常简单了。完整的代码到[gitHub下载](https://github.com/CaoXueLiang/AnimationCollection/tree/master/ProgressLoadView)。
+开始看到这个动画时无从下手，但是将动画分解成一个个简单的组合后，就非常简单了。完整的代码到[gitHub下载](https://github.com/CaoXueLiang/ProgressView)。
