@@ -11,6 +11,7 @@
 可以使用Mac自带的Keynote逐帧查看视频或者GIF。通过逐帧查看动画，我们可以观察到该动画都是由CoreAnimation基本动画组合而成的，下面我们来分析一下动画的几个关键帧。
 
 ######1. 第一步动画
+
 ![动画第一步.png](http://upload-images.jianshu.io/upload_images/979175-79f9ebd0d313f685.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 我们可以看到该动画分为两步：
@@ -51,6 +52,7 @@ animation.beginTime = CACurrentMediaTime() + 0.6;
 }
 ```
 ######2. 第二步动画
+
 ![第二步.png](http://upload-images.jianshu.io/upload_images/979175-6642a1c48bc99070.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这步动画比较简单:就是一个`Position`弹性动画。
@@ -73,6 +75,7 @@ positionAnimation.delegate = self;
 ```
 
 ######3. 第三步动画
+
 ![第三步动画.png](http://upload-images.jianshu.io/upload_images/979175-f54c498faf603b54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这一步动画比较多,我们一个一个来看：
@@ -199,6 +202,7 @@ checkAnimation.fillMode = kCAFillModeForwards;
 ```
 
 至此，所有的动画已经全部完成。最终效果如下。
+
 ![最终效果.gif](http://upload-images.jianshu.io/upload_images/979175-cb65e4a549946ba2.gif?imageMogr2/auto-orient/strip)
 
 ####总结
